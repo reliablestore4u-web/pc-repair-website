@@ -57,6 +57,18 @@
       z-index: 0;
     }
 
+    /* Logo - Top Right */
+    .site-logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .site-logo img {
+      height: 60px;
+    }
+
     .hero-content {
       z-index: 1;
       position: relative;
@@ -70,11 +82,6 @@
     .hero-content.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    .hero-content img {
-      width: 120px;
-      margin-bottom: 20px;
     }
 
     .hero-content h1 {
@@ -91,7 +98,7 @@
     .dark-toggle {
       position: absolute;
       top: 20px;
-      right: 20px;
+      left: 20px;
       background: var(--primary);
       color: white;
       border: none;
@@ -213,6 +220,25 @@
       margin-top: 40px;
     }
 
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .whatsapp-float svg {
+      margin-top: 13px;
+    }
+
     @media (max-width: 600px) {
       .hero-content h1 {
         font-size: 2rem;
@@ -232,9 +258,13 @@
 
   <!-- Hero Section -->
   <header id="home">
-    <div class="hero-content scroll-reveal">
+    <!-- Logo moved to top-right -->
+    <div class="site-logo">
       <img src="logo.png" alt="NeighborhoodPCRepair Logo" />
-      <h1>Neighborhood  PC Repair</h1>
+    </div>
+
+    <div class="hero-content scroll-reveal">
+      <h1>Neighborhood PC Repair</h1>
       <p>Your trusted local computer repair service specialists</p>
     </div>
   </header>
@@ -288,6 +318,13 @@
     &copy; 2025 Neighborhood PC Repair • 647-221-0789 • Stoney Creek
   </footer>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/16472210789" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="34" height="34" fill="white">
+      <path d="M16 .396c-8.84 0-16 7.163-16 16 0 2.816.735 5.563 2.132 7.97L0 32l8.297-2.088c2.34 1.28 4.98 1.958 7.703 1.958h.002c8.837 0 16-7.163 16-16 0-4.272-1.66-8.291-4.678-11.312C24.293 2.056 20.274.396 16 .396zm0 29.167c-2.465 0-4.869-.66-6.963-1.91l-.5-.297-4.923 1.239 1.312-4.8-.315-.494c-1.285-2.013-1.963-4.356-1.963-6.752 0-7.037 5.73-12.767 12.769-12.767 3.41 0 6.613 1.327 9.022 3.737 2.41 2.41 3.738 5.613 3.738 9.022 0 7.038-5.73 12.767-12.777 12.767zm7.02-9.615c-.385-.192-2.27-1.12-2.621-1.246-.352-.128-.609-.192-.867.192s-.995 1.246-1.221 1.504c-.225.256-.449.288-.834.096-.385-.192-1.623-.598-3.09-1.91-1.142-1.02-1.91-2.272-2.134-2.657-.225-.384-.024-.59.168-.782.173-.172.385-.449.578-.673.192-.225.257-.384.385-.64.128-.256.064-.48-.032-.673-.096-.192-.867-2.092-1.189-2.868-.314-.755-.635-.65-.867-.662-.224-.012-.48-.015-.736-.015-.257 0-.673.096-1.027.48-.352.384-1.348 1.316-1.348 3.206s1.381 3.72 1.573 3.974c.192.256 2.72 4.16 6.596 5.834.923.398 1.643.636 2.205.816.925.294 1.766.253 2.43.154.742-.111 2.27-.928 2.588-1.822.319-.894.319-1.66.223-1.822-.096-.16-.352-.256-.736-.448z"/>
+    </svg>
+  </a>
+
   <!-- Scroll-in & Dark Mode Script -->
   <script>
     // Dark mode toggle
@@ -314,6 +351,3 @@
 
 </body>
 </html>
-
-
-
