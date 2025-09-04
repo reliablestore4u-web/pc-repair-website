@@ -57,18 +57,6 @@
       z-index: 0;
     }
 
-    /* Logo - Top Right */
-    .site-logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 10;
-    }
-
-    .site-logo img {
-      height: 60px;
-    }
-
     .hero-content {
       z-index: 1;
       position: relative;
@@ -94,11 +82,23 @@
       color: #ddd;
     }
 
+    /* Logo - Top Left */
+    .site-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .site-logo img {
+      height: 80px; /* bigger logo */
+    }
+
     /* Toggle button */
     .dark-toggle {
       position: absolute;
       top: 20px;
-      left: 20px;
+      right: 20px;
       background: var(--primary);
       color: white;
       border: none;
@@ -220,13 +220,13 @@
       margin-top: 40px;
     }
 
-    /* WhatsApp Floating Button */
+    /* WhatsApp Floating Button - Bottom Right */
     .whatsapp-float {
       position: fixed;
       width: 60px;
       height: 60px;
       bottom: 20px;
-      left: 20px;
+      right: 20px;
       background-color: #25D366;
       border-radius: 50%;
       text-align: center;
@@ -253,16 +253,16 @@
 </head>
 <body>
 
+  <!-- Logo Top Left -->
+  <div class="site-logo">
+    <img src="logo.png" alt="NeighborhoodPCRepair Logo" />
+  </div>
+
   <!-- Dark Mode Toggle -->
   <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
   <!-- Hero Section -->
   <header id="home">
-    <!-- Logo moved to top-right -->
-    <div class="site-logo">
-      <img src="logo.png" alt="NeighborhoodPCRepair Logo" />
-    </div>
-
     <div class="hero-content scroll-reveal">
       <h1>Neighborhood PC Repair</h1>
       <p>Your trusted local computer repair service specialists</p>
